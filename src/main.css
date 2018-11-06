@@ -1,3 +1,23 @@
 body {
 	line-height: 2;
 }
+
+div.filters{
+	padding: 5px 10px;
+	border-bottom: 1px solid #999;
+}
+
+div.addFilter{
+	cursor: pointer;
+}
+
+div.item-layer{
+	display: flex;
+	flex-wrap: none;
+	justify-content: space-between;
+}
+
+div.listItem {
+	border-bottom: solid 1px #ccc;
+	padding: 5px 0;
+}
