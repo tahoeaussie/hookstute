@@ -16,14 +16,14 @@ export const inputWrap = line => {
 	switch(line.type){
 	case "textarea":
 			return (
-		<div>
+		<div key={line.title}>
 			{ line.title }: <textarea {...line.input} />
 		</div>)	
 	break;
 	default:
 		return (
-		<div>
-			{ line.title }: <input key={line.title} {...line.input} />
+		<div key={line.title}>
+			{ line.title }: <input {...line.input} />
 		</div>)	
 	}
 }

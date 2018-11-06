@@ -18,10 +18,10 @@ const Gripe = ({ onSubmit }) => {
 					city: gripeForm[1].input.value,
 					price: gripeForm[2].input.value
 					});
-				
+
 					formReset(gripeForm)
 			}}>
-				Gripe Input Form
+				Add a Gripe
 				{ displayForm(gripeForm) }
 				<input type="submit" value="Submit" />
 			</form>
