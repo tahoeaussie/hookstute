@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Form, Text, Select, Option } from 'informed';
-import { formItems, inputWrap } from './forms.js';
+import { formItems, inputWrap, formReset } from './forms.js';
 
 const Gripe = ({ onSubmit }) => {
-	const formInputs = [ {title: 'Name'}, {title: 'City'},{title: 'Price'},{title: 'Gripe'},{title: 'Provider'},{title: 'Extra'} ];
+	const formInputs = [ {title: 'Name'}, {title: 'City'},{title: 'Price'},{title: 'Gripe', type: 'textarea'},{title: 'Provider'},{title: 'Extra'} ];
 
 	const gripeInputs = formItems(formInputs);
 
@@ -18,6 +18,7 @@ const Gripe = ({ onSubmit }) => {
 					city: gripeInputs[1].input.value,
 					price: gripeInputs[2].input.value
 					});
+					formReset(gripeInputs)
 			}}>
 				Gripe Input Form
 				{	gripeInputs.map((p,i) => {

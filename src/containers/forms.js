@@ -11,16 +11,32 @@ export const useInputValue = initialValue => {
 };
 
 export const inputWrap = line => {
+	switch(line.type){
+	case "textarea":
 			return (
-			<div>
-				{ line.title }: <input {...line.input} />
-			</div>)		
+		<div>
+			{ line.title }: <textarea {...line.input} />
+		</div>)	
+	break;
+	default:
+		return (
+		<div>
+			{ line.title }: <input {...line.input} />
+		</div>)	
+	}
 }
 
 export const formItems = form => {
 	return form.map((item,i) => {
-		return { input: useInputValue(''), ...item}
+		let { resetValue, ...input } = useInputValue(''); 
+		return { input: input, resetValue: resetValue, ...item}
 	})
 
+}
+
+export const formReset = form => {
+	form.map((item,i) => {
+		item.resetValue();
+	})
 }
 
