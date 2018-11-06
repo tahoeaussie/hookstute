@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Form, Text, Select, Option } from 'informed';
-import * as forms from './forms.js';
+import { formItems, inputWrap } from './forms.js';
 
 const Gripe = ({ onSubmit }) => {
-	const griping = [ {title: 'Name'}, {title: 'City'},{title: 'Price'},{title: 'Gripe'},{title: 'Provider'},{title: 'Extra'} ];
+	const formInputs = [ {title: 'Name'}, {title: 'City'},{title: 'Price'},{title: 'Gripe'},{title: 'Provider'},{title: 'Extra'} ];
 
-	const { formItems, useInputValue, inputWrap } = forms;
-
-	const gripeInputs = formItems(griping);
+	const gripeInputs = formItems(formInputs);
 
 	return (
 		<div className="addGripe">
