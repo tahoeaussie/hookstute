@@ -3,7 +3,7 @@ import { Form, Text, Select, Option } from 'informed';
 import { createForm, displayForm, formReset, returnSubmit } from './forms.js';
 
 const Gripe = ({ onSubmit }) => {
-	const formInputs = [ {title: 'Name'}, {title: 'City'},{title: 'Price'},{title: 'Gripe', type: 'textarea'},{title: 'Provider'}];
+	const formInputs = [{title: 'Name'},{title: 'City'},{title: 'Price'},{title: 'Gripe', type: 'textarea'},{title: 'Provider'}];
 
 	const gripeForm = createForm(formInputs);
 

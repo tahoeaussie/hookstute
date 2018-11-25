@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Form, Text, Select, Option } from 'informed';
 import faker from 'faker';
 import Moment from 'moment';
@@ -25,6 +25,12 @@ const populate = num =>  {
 const List = () => {
 	const [ population, setPopulation ] = useState(populate(3));
 	const [ filter, setFilter ] = useState('');
+	const [ count, setCount ] = useState('');
+
+	useEffect(() => {
+		setCount(population.length);
+		document.title = count + ' Gripes - Get it off your Chest';
+	})
 
 	return(
 			<div id="List">
