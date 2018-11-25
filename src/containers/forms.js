@@ -48,10 +48,10 @@ export const formReset = form => {
 }
 
 export const returnSubmit = form => {
-	let response = form.map((row, i) => {
-		return row.input.value
-	})
-	formReset(form);
-	return response;
+	// let response = form.map((row, i) => {
+	// 	return row.input.value
+	// })
+	// formReset(form);
+	// return response;
 }
 

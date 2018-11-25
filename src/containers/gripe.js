@@ -21,7 +21,7 @@ const Gripe = ({ onSubmit }) => {
 
 					formReset(gripeForm)
 			}}>
-				Add a Gripe
+				Add a Gripe Here
 				{ displayForm(gripeForm) }
 				<input type="submit" value="Submit" />
 			</form>
